@@ -97,6 +97,7 @@ import CameraAltOutlined from "@mui/icons-material/CameraAltOutlined";
 import PersonOutlined from "@mui/icons-material/PersonOutlineOutlined";
 import { Avatar, Badge, Popover } from "@mui/material";
 import { makeStyles } from "@mui/styles"; // ✅ Corrected Import
+import { useAppContext } from "../context/ContextApp.jsx";
 
 // ✅ Define styles correctly
 const useStyles = makeStyles(() => ({
@@ -109,9 +110,13 @@ const useStyles = makeStyles(() => ({
 const Header = () => {
   // Popover state
   const [currentUser, setCurrentUser] = useState(null);
-  const [appState, setAppState] = useState("empty");
+  const value = useAppContext()
+
+  console.log(value)
   const [anchorEl, setAnchorEl] = useState(null);
+
   const classes = useStyles();
+
 
   // Handle Popover open/close
   const handleClick = (event) => {
