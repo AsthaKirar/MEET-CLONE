@@ -18,7 +18,7 @@ const Home = () => {
         </div>
 
         <div className="hero_buttons mt-7">
-          <button className="hero_createBTN flex items-center justify-center bg-green-700 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">
+          <button className="hero_createBTN flex items-center justify-center bg-green-700 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ">
             <VideoCallOutlined className="mr-2" />
             New Meeting
           </button>
