@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import Header from "./components/Header/";
+import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
-
+import Signup from "./components/Signup/Signup";
+import { Route, Routes } from "react-router-dom";
 
 const App = () => {
   const [appState, setAppState] = useState("empty");
@@ -10,8 +11,11 @@ const App = () => {
   return (
     <div>
       <Header explain={appState} />
-      <Home />
-      <Login/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
     </div>
   );
 };

@@ -1,5 +1,3 @@
-
-
 import { createContext, useContext, useEffect, useState } from "react";
 
 // ✅ Create Context
@@ -29,7 +27,7 @@ export const AppContextProvider = ({ children }) => {
     });
   }, []);
 
-  const value = { currentUser, AppState };
+  const value = { currentUser, AppState, setCurrentUser };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
